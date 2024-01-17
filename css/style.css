@@ -75,6 +75,7 @@ header {
   border-top: 1px solid #ffffff;
   border-left: 1px solid #ffffff;
   border-right: 1px solid #ffffffe0;
+  backdrop-filter: blur(5px); /* Aplica o efeito de desfoque */
   height: 60px;
   position: absolute;
   top: calc(100% - 30px);
@@ -150,10 +151,9 @@ header {
   text-align: center;
   color: #ffffff;
 }
-.perfil h2{
+.perfil h2, .perfil span{
   font-size: 2rem;
   font-family: 'Amaranth', sans-serif;
-
 }
 .perfil-info{
  padding: 30px 0;
@@ -431,6 +431,7 @@ input[type=button] {
   font-family: 'Open Sans', sans-serif;
 }
 .texto-experiencia p{
+  margin: 6px 0;
   font-size: 0.9rem;
   font-family: 'Open Sans', sans-serif;
 }
@@ -471,22 +472,24 @@ input[type=button] {
 .cursos,
 .habilidade{
   width: 80%;
-  max-width: 250px;
-  height: 200px;
+  max-width: 260px;
+  height: 220px;
   margin: auto;
   position: relative;
 }
 .cursos-single,
 .habilidades-single{
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  background: rgb(6,6,6);
-  background: linear-gradient(0deg, rgba(6,6,6,1) 0%, rgba(191,6,46,1) 100%);
+  justify-content: space-between;
+  align-items: center;
+  background-color: #bf062ebd;
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
   padding: 5px 5px;
-  border: 1px solid #bf062e;
+  border: 0;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -568,6 +571,7 @@ footer h1{
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
   padding:  0 2% ;
 }
 .img{
@@ -579,6 +583,7 @@ footer h1{
   max-width: 350px;
 }
 .ContactText{
+  width: 100%;
   height: 70%;
 }
 .ContactText h4{
@@ -664,7 +669,6 @@ label{
 .col input:valid~label{
   top: 0px;
   font-size: 0.9rem;
-  color: #bf062e;
 }
 .form-group textarea{
   width: 100%;
@@ -837,7 +841,7 @@ button:hover{
     text-align: center;
   }
   .menu-mobile-single:hover{
-    background-color: #b4f1b27a;
+    background-color: #bf062e;
   }
   .menu-desktop{
     display: none;
